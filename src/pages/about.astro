@@ -4,6 +4,17 @@
 
 <html lang="en">
 	<head>
+    <script>
+      (function() {
+        const base = document.createElement('base');
+        if (window.location.hostname === 'jmanlarkin.github.io') {
+          base.href = '/astro_tut/';
+        } else {
+          base.href = '/';
+        }
+        document.head.appendChild(base);
+      })();
+    </script>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
@@ -33,9 +44,9 @@
             }
           </style>
         <ul>
-            <li><a href="/">home</a></li>
-            <li><a href="/about/">about</a></li>
-            <li><a href="/photography/">photography</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="about/">about</a></li>
+            <li><a href="photography/">photography</a></li>
         </ul>
 
 		<h1>photosinprogress</h1>
