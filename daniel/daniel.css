@@ -8,6 +8,7 @@
 
 /* Style images to be proportional */
 .page-content img {
+    width: 100%;
     max-width: 400px;
     height: auto;
     display: block;
