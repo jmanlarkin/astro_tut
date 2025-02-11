@@ -1,0 +1,70 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+    <script>
+      (function() {
+        const base = document.createElement('base');
+        if (window.location.hostname === 'jmanlarkin.github.io') {
+          base.href = '/astro_tut/';
+        } else {
+          base.href = '/';
+        }
+        document.head.appendChild(base);
+      })();
+    </script>
+		<meta charset="utf-8" />
+    <!-- favicon -->
+		<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <!------------->
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>photosinprogress</title>
+
+        <style>
+            /* Style the .page-content section */
+            .page-content {
+              font-size: 18px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 0 auto;
+            }
+        
+            /* Style the image to fit proportionally */
+            .page-content img {
+              width: 100%;       /* Make the image scale down to fit the container width */
+              max-width: 600px;  /* Limit the image width to 600px */
+              height: auto;      /* Ensure aspect ratio is maintained */
+              display: block;    /* Make sure it's a block element to avoid inline issues */
+              margin: 20px auto; /* Center the image and add margin for spacing */
+            }
+          </style>
+	</head>
+	<body>
+        <p>Daniel,</p>
+        <p>
+            I’m sorry to say that your generous Christmas gift was not put towards its intended purpose, but instead used to purchase a small camera that I can put in my pocket and take everywhere. I just don’t have the space in my current apartment for more cookware—as much as I wish that I did. But, because I know you’re interested, I’ve included a photo of my <em>“favorite”</em>
+            piece: an <strong>AUS-ION™ 26cm carbon-steel frying pan</strong>
+            , taken on the aforementioned camera. It’s due for a re-seasoning, but still works pretty well. My only issue is that it is <em>damn heavy!</em>
+            Especially for carbon steel.
+        </p>
+        <p>
+            <img src="daniel/daniel.jpg" alt="AUS-ION™ 26cm Carbon-Steel Frying Pan">
+        </p>
+        <p>Anyway, it means a lot that you would think of me. I hope that we find ourselves together soon, in person, to discuss more about all things: cookware and more.</p>
+        <p>
+            Love,<br>
+            <strong>Jonathan</strong>
+        </p>
+        <p>P.S. What is the favorite piece of your kitchen collection?</p>
+	</body>
+</html>
+
+
+
