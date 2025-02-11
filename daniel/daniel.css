@@ -1,0 +1,15 @@
+/* Increase text size and improve readability */
+.page-content {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Style images to be proportional */
+.page-content img {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
