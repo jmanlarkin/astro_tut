@@ -1,65 +1,48 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro"
 
+const pageTitle = "about me"
+
+const identity = {
+  firstName: "Jonathan",
+  country: "Canada",
+  occupation: "Laboratory Assistant",
+  hobbies: ["photography","cooking","watching films"]
+};
+
+const skills = ["idiocracy", "tests"]
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = "green";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
-
-<html lang="en">
-	<head>
-    <script>
-      (function() {
-        const base = document.createElement('base');
-        if (window.location.hostname === 'jmanlarkin.github.io') {
-          base.href = '/astro_tut/';
-        } else {
-          base.href = '/';
-        }
-        document.head.appendChild(base);
-      })();
-    </script>
-		<meta charset="utf-8" />
-    <!-- favicon -->
-		<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <!------------->
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>photosinprogress</title>
-	</head>
-	<body>
-        <style>
-            /* Basic styling */
-            ul {
-              list-style-type: none;
-              padding: 0;
-            }
-            
-            li {
-              display: inline;
-              margin-right: 20px;
-            }
-            
-            a {
-              text-decoration: none;
-              color: #007BFF;
-            }
-            
-            a:hover {
-              color: #0056b3;
-            }
-          </style>
-        <ul>
-          <li><a href="">home</a></li>
-          <li><a href="about/">about</a></li>
-          <li><a href="photography/">photography</a></li>
-          <li><a href="thoughts/">thoughts</a></li>
-        </ul>
-
-		<h1>photosinprogress</h1>
-        <h1>about <i>me</i></h1>
+<BaseLayout pageTitle={pageTitle}>
+    <h1>about <i>me</i></h1>
 
         <p>I love film. And working on my photography practice. Also, some scientific things, too.</p>
 
-	</body>
-</html>
+        <ul>
+          <li>My name is {identity.firstName}</li>
+          <li>I live in {identity.country}</li>
+          <li>This is a test: {identity.hobbies[0]}</li>
+        </ul>
+        <p>This is a list of things:</p>
+        <ul>
+          {skills.map((skill) => <li class="skill">{skill}</li>)}
+        </ul>
+
+        {happy && <p>I am happy to be learning Astro!</p>}
+        {finished && <p>I finished this tutorial!</p>}
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    <style define:vars={{skillColor, fontWeight, textCase}}>
+        .skill {
+          color: var(--skillColor);
+          font-weight: var(--fontWeight);
+          text-transform: var(--textCase);
+        }
+      </style>
+</BaseLayout>
